@@ -11,7 +11,7 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #9d8d8f;
+  background-color: #46344e;
   margin: 0;
   color: #fff;
   line-height: 1.6;
@@ -26,34 +26,70 @@ a {
   color: #ccc;
 }
 
+.hide-on-large {
+  display: none;
+}
+
 .ebay-link a {
   color: var(--primary-color);
 }
-/* Section */
-.section {
-  padding: 2rem 0;
+
+/* Products */
+#products {
+  color: #333;
+}
+#products.bg-image {
+  /* overlay trick */
+  background: linear-gradient(rgba(250, 237, 38, 0.55),rgba(250, 237, 38,0.55)),url(../images/bike-row.jpeg) no-repeat center center/cover;
 }
 
-.section-head {
-  font-size: 2.5rem;
-  margin: 0;
+#products .items {
+  display: flex;
 }
 
-.section h3 {
-  font-size: 2rem;
+#products .items img{
+  display: block;
+  margin: auto;
+  width: 25%;
 }
 
-#entertainment {
-  background: url(https://raw.githubusercontent.com/bradtraversy/mytunes_landing/master/dist/img/section-bg.jpg);
-  padding: 10rem 0;
+#products .items img {
+  display: block;
+  margin: auto;
+  width: 37%;
 }
 
-.gift-cards {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: left;
+#products .items img {
+  display: block;
+  margin: auto;
+  width: 37%;
 }
+
+
+
+/* Directions */
+#directions {
+  display:flex;
+  
+}
+
+#directions .map, #directions .hours{
+  flex: 1;
+}
+
+#directions .bg-image {
+
+  /* overlay trick */
+  background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(../images/bicycle-bell.jpeg) no-repeat center center/cover;
+  
+}
+
+#directions .hours {
+  padding: 2rem 2rem 2rem;
+  
+}
+
+
 /*  Showcase  */
 #showcase {
   margin: 0;
@@ -78,31 +114,6 @@ a {
   font-size: 2rem;
 }
 
-/* Footer */
-footer .footer-cols {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
-  text-align: left;
-  font-size: 14px;
-}
-
-footer .footer-cols ul {
-  list-style: none;
-}
-
-footer .footer-cols ul li:first-child {
-  font-size: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: #444 solid 1px;
-  margin-bottom: 1rem;
-}
-
-footer .footer-bottom {
-  background: #333;
-  padding: 1rem;
-}
 
 /* Utility Classes */
 .container {
@@ -115,6 +126,20 @@ footer .footer-bottom {
 .lead {
   font-size: 1.3rem;
 }
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
 
 /* Buttons */
 .btn {
@@ -165,7 +190,7 @@ footer .footer-bottom {
 nav {
   height: 40px;
   width: 100%;
-  /* background-color: rgb(64, 181, 235); */
+  background-color: rgb(86, 100, 106);
   color: #eee;
   position: fixed;
   top: 0;
@@ -200,8 +225,23 @@ nav a#openup {
 }
 
 @media screen and (max-width: 580px) {
+
+ 
+  .hide-on-large {
+    display: inline;
+  }
   .hide-on-small {
     display: none;
+  }
+
+  #directions {
+    display: block;
+    
+  }
+
+  #directions .map {
+    height: 200px;
+    
   }
 
   #showcase {

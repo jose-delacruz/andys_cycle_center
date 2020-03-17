@@ -19,18 +19,21 @@
             <li >
               <a href="#showcase">Home</a>
             </li>
-            <li>
-                <a href="#directions">Directions</a>
+            <li class="hide-on-small">
+              <a href="#products">Products</a>
             </li>
             <li>
+                <a href="#directions">Contact & Directions</a>
+            </li>
+            <li class="hide-on-large">
+              <a href="#ebay">eBay Page</a>
+          </li>
+            <!-- <li>
               <a href="#">Andy's Bike Catalog</a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <a href="#" class="hide-on-small">Cycling Brands</a>
-            </li>
-            <li>
-              <a href="#about">About Us</a>
-            </li>
+            </li> -->
           </ul>
           <a href="#showcase" id="openup">Andy's Cycle Center</a>
         </nav>
@@ -42,23 +45,62 @@
           Andy's Cycle Center has been selling quality bicycles and providing
           superior service for bike riders in Linden and the surrounding areas
           of Union and Middlesex Counties for more than 40 years. We also have a
-          successful online presence on eBay. Visit us or check us out
+          successful online presence on eBay. <br> Visit us, check us out
           <span class="ebay-link"
-            ><a href="https://www.ebay.com/str/bikeguy22">here</a></span
-          >.
+            ><a href="https://www.ebay.com/str/bikeguy22"  target="blank">here on eBay,</a></span
+          > or call us at (908) 486-3032.
         </p>
       </div>
     </div>
-    <!--  Directions and Hours Section -->
-    <section id="directions" class="section">
-      <div class="container">
-        <!-- Directions and hours here -->
-    </section>
+
+    <!-- Section: Products -->
+  <section id="products" class="py-1 bg-image hide-on-small">
+    <div class="container">
+      <h2 class="m-heading text-center"> Our Products
+      </h2>
+      <p class="lead">
+        We are proud to carry Trek, Premium, MirraCo, Electra, Biria, Montague Folding and Haro Bicycles. We also have accessories by Bontrager, Garmin, Park Tool, Kryptonite Locks, and Car Racks from Saris and Thule. 
+      </p>
+      <div class="items py-1">
+        <div><img src="./images/logos/logo1.png" alt="Client"></div>
+        <div><img src="./images/logos/logo4.webp" alt="Client"></div>
+        <div><img src="./images/logos/logo5.webp" alt="Client"></div>
+      </div>
+    </div>
+  </section>
+    
+    
+  <!-- Directions and Hours Section -->
+  <section id="directions">
+      <div class="hours bg-image text-center">
+        <h2 class="m-heading">Hours <span class="hide-on-large">& Contact</span></h2>
+        <h4 class="lead hide-on-large" >Phone: (908) 486-3032</h4>
+        <h4 class="lead" >Mon - Sat: 10:30am - 7pm</h4>
+        <h4 class="lead" >Sunday: Closed</h4>
+      </div>
+    <div class="map"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+    <div class="container">
+        <p>Copyright &copy; 2020, Andy's Cycle Center, All Rights Reserved</p>
+    </div>
+  </footer>
+        
+
+  <!-- JQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+
+    <!-- Local JS File -->
     <script src="js/main.js"></script>
+
+    <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW0N6IUv7p9quOgJ_qriIMhNh9SRwV7rQ&callback=initMap"
+  async defer></script>
   </body>
 </html>
